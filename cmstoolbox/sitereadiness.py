@@ -29,7 +29,7 @@ def i_site_readiness():
     timeout = 1800   # Download every half hour
 
     if not TIMESTAMP or time.time() > TIMESTAMP + timeout:
-        req = requests.get('https://test-cmssst.web.cern.ch/ssb_metric/ProdStatus.txt')
+        req = requests.get('https://cmssst.web.cern.ch/ssb_metric/ProdStatus.txt')
         RESULT = req.text
         TIMESTAMP = time.time()
 
